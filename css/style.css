@@ -1,0 +1,458 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fddedb;
+    transition: background 0.5s, color 0.5s;
+}
+
+/* Password Popup Styling */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 320px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.popup-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff3366;
+}
+
+.popup-input {
+    width: 90%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 2px solid #ff6699;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.popup-button {
+    padding: 12px 18px;
+    background: #ff3366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.popup-button:hover {
+    background: #cc0044;
+}
+
+/* Welcome Animation */
+.welcome-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    display: none;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.plus-icon {
+    font-size: 32px; /* Size bada */
+}
+
+
+
+/* Header & Menu */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+}
+
+.header {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #ff3366;
+}
+
+.menu a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: rgb(104, 31, 163);
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff3366;
+}
+/* Toggle Container */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: gray;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: black;
+}
+
+input:checked + .slider::before {
+    transform: translateX(20px);
+}
+button {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.1);
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+/* Dark mode hone par sirf .dark-text class wale elements ka text white ho */
+.dark-mode .menu {
+    color: white !important;
+}
+
+.abc-header{
+    text-align: center;
+}
+/* Animated Background */
+.animated-background {
+ 
+    background-size: 400% 400%;
+    animation: backgroundAnimation 10s infinite linear;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Animated Photos */
+.animated-photo {
+    width: 220px;
+    border: 6px solid #ff6699;
+    border-radius: 20px;
+    opacity: 0;
+    transform: scale(0.5);
+    transition: opacity 0.5s ease-in-out, transform 2s ease-in-out;
+}
+/* Animation for Fading Effect */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+/* Hidden Class to Show Photos One by One */
+.show-photo {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Photo Container */
+.photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+/* Romantic Animation Border */
+.animated-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 102, 153, 0.8);
+}
+
+/* Hidden Class */
+.hidden {
+    display: none;
+}
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 16px;
+    font-weight: bold;
+    position: fixed;  /* Screen ke bottom pe fix kar diya */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+footer a {
+    color: #ff4b2b;
+    text-decoration: none;
+}
+
+footer span {
+    color: #ff416c;
+}
+/*feeling.html*/
+/* Light Mode */
+body.light {
+    background: #ffecec;
+    color: #333;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #1e1e1e;
+    color: #fff;
+}
+
+/* Section Styles */
+.section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.5s ease;
+}
+
+/* Shayari Section */
+.shayari {
+    background: rgba(255, 182, 193, 0.2);
+    text-align: center;
+    font-size: 1.5rem;
+    font-style: italic;
+    border-left: 5px solid #ff69b4;
+    padding: 20px;
+}
+
+/* Letter Section */
+.letter {
+    background: rgba(240, 248, 255, 0.2);
+    text-align: left;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.3rem;
+    padding: 20px;
+}
+
+/* Dream Section */
+.dream {
+    background: rgba(173, 216, 230, 0.2);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 20px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Dark Mode Adjustments */
+body.dark .shayari {
+    background: rgba(255, 182, 193, 0.1);
+    border-left-color: #ff1493;
+}
+
+body.dark .letter {
+    background: rgba(240, 248, 255, 0.1);
+    color: #ffebcd;
+}
+
+body.dark .dream {
+    background: rgba(173, 216, 230, 0.1);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+/* Main container */
+.feeling-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px 10px;
+}
+
+/* Common Box Styling */
+.feeling-box {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15); /* Glass Effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Reflection Effect */
+.feeling-box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 50%);
+    opacity: 0.5;
+    transform: rotate(30deg);
+}
+
+/* Hover Effect */
+.feeling-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Text Styling */
+.feeling-box h2 {
+    font-size: 26px;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feeling-box p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Dark Mode Styling */
+.dark-mode .feeling-box {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .feeling-box h2,
+.dark-mode .feeling-box p {
+    color: white !important;
+}
+.feeling-box {
+    background: #ffe6e6;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 80%;
+    margin: 20px auto;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    white-space: pre-line; /* Yeh new lines maintain karega */
+    color: black;
+    position: relative;
+}
+
+.feeling-box::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    bottom: -10px;
+    left: 0;
+    filter: blur(5px);
+}
+
+.dark-mode .feeling-box {
+    background: #333;
+    color: white; /* Dark mode ke liye text white hoga */
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+}
+.custom-button {
+    display: inline-block;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 5px 15px rgba(255, 105, 135, 0.3);
+}
+
+.custom-button:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(255, 105, 135, 0.5);
+}
+
+.dark-mode .custom-button {
+    background: linear-gradient(45deg, #222, #444);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .custom-button:hover {
+    background: linear-gradient(45deg, #444, #666);
+}
