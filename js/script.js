@@ -22,17 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-  document.addEventListener('keydown', function(e) {
-    if ((e.ctrlKey || e.metaKey) && (e.key === '+' || e.key === '-' || e.key === '=')) {
-      e.preventDefault();
-    }
-  });
 
-  document.addEventListener('wheel', function(e) {
-    if (e.ctrlKey) {
-      e.preventDefault();
-    }
-  }, { passive: false });
 function checkPassword() {
     let password = document.getElementById("passwordInput").value;
     if (password === "shashikant mahi") { 
