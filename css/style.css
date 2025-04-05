@@ -6,19 +6,6 @@ body {
     transition: background 0.5s, color 0.5s;
     color: black;
 }
-html, body {
-  width: 1024px;
-  overflow-x: auto;
-  margin: 0;
-  padding: 0;
-  zoom: 1;
-}
-@media only screen and (max-width: 1024px) {
-  * {
-    all: unset !important;
-  }
-}
-
 /* Password Popup Styling */
 .popup {
     position: fixed;
