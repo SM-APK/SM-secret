@@ -1,11 +1,17 @@
 /* Global Styles */
 body {
+    width: 1024px;    
+    margin: 0 auto;
     font-family: Arial, sans-serif;
     text-align: center;
     background-color: #fddedb;
     transition: background 0.5s, color 0.5s;
     color: black;
 }
+html, body {
+  overflow-x: hidden;
+}
+
 /* Password Popup Styling */
 .popup {
     position: fixed;
