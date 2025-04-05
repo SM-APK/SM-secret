@@ -1,13 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SM Website</title>
+    <meta name="viewport" content="width=1200, initial-scale=1.0">
+    <title>SM Website-Photo\video</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+    <div class="toggle-container">
+        <span id="modeText">Light</span>
+        <label class="switch">
+            <input type="checkbox" id="modeToggle">
+            <span class="slider"></span>
+        </label>
+    </div>
     <!-- Password Popup -->
     <div id="passwordPopup" class="popup">
         <p>Enter Password</p>
@@ -27,60 +35,151 @@
         <header class="header-container">
             <h1 class="header">SHASHIKANT & MAHI</h1>
             <nav class="menu">
-                <a href="index.html">PHOTO</a>
-                <a href="#">INSTAGRAM</a>
+                <a href="index.html">PHOTO,VIDEO</a>
                 <a href="feeling.html">FEELING</a>
             </nav>
         </header>
-
-        <div class="toggle-container">
-            <span id="modeText">Light</span>
-            <label class="switch">
-                <input type="checkbox" id="modeToggle">
-                <span class="slider"></span>
-            </label>
-
-        </div>
+<br><br><br><br>
+        <h3 class="abc-header">Mahi ji feeling hai meri apke liye  <a href="https://drive.google.com/drive/folders/1EPwjvyvQEpU1naKwtgwoJGkurQUwFfDn?usp=sharing" class="custom-button">PHOTO DOWNLOAD</a>
+<br><br><br>
         
-
-
-        <!-- Animated Background & Photo Section -->
+        <h2 class="header-line-1">Mahi ji ek baar Please website Puri dekhna ye  <a href="feeling.html"> FEELING</a> wali aur ye <a href="index.html" >PHOTO,VIDEO</a> wali Plz</h2><br><br>
+        <H2 class="header-line-2">Mahi ji mene sirf tumare liye banai hai agr aachi na lage to maaf karna and scoll down karo</H2>
         <main class="animated-background">
-            <section class="photo-section">
-                <br><br><br>
-                <h3 class="abc-header">MAHI FEELING HAI MERI APKE LIYE <a href="https://drive.google.com/drive/folders/1EPwjvyvQEpU1naKwtgwoJGkurQUwFfDn?usp=sharing" class="custom-button">PHOTO DOWNLOAD</a>
-                </h3>
-                <div class="photo-container">
-                    <img src="PHOTO ON SM/PHOTO/SHASHIKANT NORMAL PHOTO.jpeg" class="animated-photo hidden-photo" alt="Shashikant" width="200px" height="230px">
-                    <span class="plus-icon hidden-photo">+</span>
-                    <img src="PHOTO ON SM/PHOTO/MAHI NORMAL PHOTO.jpeg" class="animated-photo hidden-photo" alt="Mahi" width="200px" height="230px">
-                </div>
-                <div class="ghibli-art">
-                    <br><br><br>
-                    <img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 1 (1).png" class="animated-photo hidden-photo" alt="Ghibli Art 1">
-                    <img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 1 (2).png" class="animated-photo hidden-photo" alt="Ghibli Art 2">
-                    <img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 1 (3).png" class="animated-photo hidden-photo" alt="Ghibli Art 3">
-                    <br><br><br><br><br><br><br><br><br><br>
-                    <div class="photo-container">
-                        <img src="PHOTO ON SM/PHOTO/SHASHIKANT NORMAL PHOTO 2.jpeg" class="animated-photo hidden-photo" alt="Shashikant" width="200px" height="230px">
-                        <span class="plus-icon hidden-photo">+</span>
-                        <img src="PHOTO ON SM/PHOTO/MAHI NORMAL PHOTO 2.jpeg" class="animated-photo hidden-photo" alt="Mahi" width="200px" height="230px">
-                    </div>
-                    <div class="ghibli-art">
-                        <br><br><br>
-                        <img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 2 (1).png" class="animated-photo hidden-photo" alt="Ghibli Art 1">
-                        <img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 2 (2).png" class="animated-photo hidden-photo" alt="Ghibli Art 2">
-                        <img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 2 (3).png" class="animated-photo hidden-photo" alt="Ghibli Art 3">
                         <br><br><br><br><br><br><br><br><br><br>
-                    <footer>
-                        <p>Website Created by <span>Shashikant</span></p>
-                        <p>Contact: <a href="https://www.instagram.com/shashikant70560" target="_blank">@shashikant70560</a></p>
-                    </footer>
-                    
-                </div>
+                <!-- 🌸 UNIQUE MAHI PHOTO SECTION TOGGLE -->
+<section class="mahi-photo-section">
+    <h2 class="mahi-photo-title">Mahi ❤️</h2>
+    <label class="switch">
+        <input type="checkbox" id="mahiPhotoToggle">
+        <span class="slider"></span>
+    </label>
+    <span id="mahiToggleLabel">Show Mahi Photos</span>
+    
+    <div id="mahiPhotoContainer" class="mahi-hidden-photo">
+        <div class="mahi-photo-grid">
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 1.jpeg" class="mahi-animated-photo" alt="Mahi 1"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 2.jpeg" class="mahi-animated-photo" alt="Mahi 2"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 3.jpeg" class="mahi-animated-photo" alt="Mahi 3"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 4.jpeg" class="mahi-animated-photo" alt="Mahi 4"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 5.jpeg" class="mahi-animated-photo" alt="Mahi 5"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 6.jpeg" class="mahi-animated-photo" alt="Mahi 6"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 7.jpeg" class="mahi-animated-photo" alt="Mahi 7"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 8.jpeg" class="mahi-animated-photo" alt="Mahi 8"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 9.jpeg" class="mahi-animated-photo" alt="Mahi 9"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 10.jpeg" class="mahi-animated-photo" alt="Mahi 10"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 11.jpeg" class="mahi-animated-photo" alt="Mahi 11"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 12.jpeg" class="mahi-animated-photo" alt="Mahi 12"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 13.jpeg" class="mahi-animated-photo" alt="Mahi 13"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 14.jpeg" class="mahi-animated-photo" alt="Mahi 14"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 15.jpeg" class="mahi-animated-photo" alt="Mahi 15"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 16.jpeg" class="mahi-animated-photo" alt="Mahi 16"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 17.jpeg" class="mahi-animated-photo" alt="Mahi 17"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 18.jpeg" class="mahi-animated-photo" alt="Mahi 18"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 19.jpeg" class="mahi-animated-photo" alt="Mahi 19"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 20.jpeg" class="mahi-animated-photo" alt="Mahi 20"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 21.jpg" class="mahi-animated-photo" alt="Mahi 21"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 22.jpg" class="mahi-animated-photo" alt="Mahi 22"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 23.jpeg" class="mahi-animated-photo" alt="Mahi 23"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 24.jpeg" class="mahi-animated-photo" alt="Mahi 24"></div>
+            <div class="mahi-photo-box"><img src="PHOTO MAHI/MAHI PHOTO 25.jpeg" class="mahi-animated-photo" alt="Mahi 25"></div>
+        </div>
+    </div>
+</section>
+
+                <!-- MAHI VIDEO SECTION -->
+                <section class="video-section">
+                    <h2 class="video-title">Mahi ji Apke liye edit ❤️</h2>
+                    <label class="switch">
+                        <input type="checkbox" id="mahiVideoToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span id="mahiToggleLabel">Show Mahi ji Videos</span>
+                    <div id="mahiVideoContainer" class="hidden-video">
+                        <div class="reels-container">
+                            <video class="reel-video" controls>
+                                <source src="PHOTO ON SM/VIDEO/MAHI VIDEO 1.mp4" type="video/mp4">
+                            </video>
+                            <video class="reel-video" controls>
+                                <source src="PHOTO ON SM/VIDEO/MAHI VIDEO 2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </section>
+                <!-- EDITED VIDEO SECTION -->
+                <section class="video-section">
+                    <h2 class="video-title">Edit for you 🎬</h2>
+                    <label class="switch">
+                        <input type="checkbox" id="editVideoToggle">
+                        <span class="slider"></span>
+                    </label>
+                    <span id="editToggleLabel">Show Editing your</span>
+                    <div id="editVideoContainer" class="hidden-video">
+                        <div class="reels-container">
+                            <video class="reel-video" controls>
+                                <source src="PHOTO ON SM/VIDEO/EDIT 1.mp4" type="video/mp4">
+                            </video>
+                            <video class="reel-video" controls>
+                                <source src="PHOTO ON SM/VIDEO/EDIT 2.mp4" type="video/mp4">
+                            </video>
+                            <video class="reel-video" controls>
+                                <source src="PHOTO ON SM/VIDEO/EDIT 3.mp4" type="video/mp4">
+                            </video>
+                            <video class="reel-video" controls>
+                                <source src="PHOTO ON SM/VIDEO/EDIT 4.mp4" type="video/mp4">
+                            </video>
+                            <video class="reel-video" controls>
+                                <source src="PHOTO ON SM/VIDEO/EDIT 5.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </section>
+                <section class="mahi-photo-section">
+                    <h2 class="mahi-photo-title">Ghibli Art Photo ❤️</h2>
+                    <div id="mahiPhotoContainer" class="mahi-hidden-photo">
+                        <div class="ghibli-photo-griz">
+                            
+                            <!-- 1st Normal Photo Pair -->
+                            <div class="normal-photo-pair">
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/SHASHIKANT NORMAL PHOTO.jpeg" alt="shashikant-1"></div>
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/MAHI NORMAL PHOTO.jpeg" alt="mahi-1"></div>
+                            </div>
+                
+                            <!-- 1st Ghibli Art Row -->
+                            <div class="ghibli-photo-row">
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 1 (1).png" alt="ghibli-1"></div>
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 1 (2).png" alt="ghibli-2"></div>
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 1 (3).png" alt="ghibli-3"></div>
+                            </div>
+                
+                            <!-- 2nd Normal Photo Pair -->
+                            <div class="normal-photo-pair">
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/SHASHIKANT NORMAL PHOTO 2.jpeg" alt="shashikant-2"></div>
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/MAHI NORMAL PHOTO 2.jpeg" alt="mahi-2"></div>
+                            </div>
+                
+                            <!-- 2nd Ghibli Art Row -->
+                            <div class="ghibli-photo-row">
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 2 (1).png" alt="ghibli-4"></div>
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 2 (2).png" alt="ghibli-5"></div>
+                                <div class="photo-box"><img src="PHOTO ON SM/PHOTO/SHASHIKANT AND MAHI GHIBLI ART 2 (3).png" alt="ghibli-6"></div>
+                            </div>
+                
+                        </div>
+                    </div>
+                </section>
+                
+                
+                
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <footer>
+                    <p>Website Created by <span>Shashikant</span></p>
+                    <p>Contact: <a href="https://www.instagram.com/shashikant70560" target="_blank">@shashikant70560</a></p>
+                </footer>
             </section>
         </main>
-    </div>
+        
+     </div>
     <script src="js/script.js"></script>
 
 
