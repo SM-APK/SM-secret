@@ -4,6 +4,7 @@ body {
     text-align: center;
     background-color: #fddedb;
     transition: background 0.5s, color 0.5s;
+    color: black;
 }
 
 /* Password Popup Styling */
@@ -12,13 +13,18 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.9);
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
     text-align: center;
     width: 320px;
     animation: fadeIn 1s ease-in-out;
+}
+.popup p {
+    color: white;  /* अब "Enter Password" सफेद दिखेगा */
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .popup-title {
@@ -186,58 +192,514 @@ button:hover {
 .abc-header{
     text-align: center;
 }
-/* Animated Background */
-.animated-background {
- 
-    background-size: 400% 400%;
-    animation: backgroundAnimation 10s infinite linear;
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-@keyframes backgroundAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
 }
 
-/* Animated Photos */
-.animated-photo {
-    width: 220px;
-    border: 6px solid #ff6699;
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+/* Common Section Styling */
+.mahi-photo-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.mahi-photo-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff4d6d;
+    margin-bottom: 30px;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+/* Photo Grid */
+.ghibli-photo-griz {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+/* Row for Normal or Ghibli Photos */
+.normal-photo-pair,
+.ghibli-photo-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-end; /* 👈 Important: Align photos to bottom */
+}
+
+/* Photo Box Styling */
+.photo-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: var(--photo-bg);
     border-radius: 20px;
+    padding: 8px;
+    box-shadow: 0 0 20px rgba(255, 105, 135, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(255, 105, 135, 0.5);
+    max-height: 260px; /* 🔽 Limit max height to align all photos */
+}
+
+/* Image Styling */
+.photo-box img {
+    max-height: 240px;
+    width: auto;
+    border-radius: 15px;
+    display: block;
+    object-fit: contain;
+}
+
+/* Hover Romantic Effect */
+.photo-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 0, 128, 0.6);
+    border-color: #ff007f;
+}
+
+/* Theme Support */
+:root {
+    --photo-bg: #ffffff;
+}
+
+body.dark-mode {
+    --photo-bg: #1a1a1a;
+}
+
+/* Heading Animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General Styles for Photos */
+#photoSection {
+    margin: 30px auto;
+    text-align: center;
+}
+
+.photo-container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.photo-section,
+.ghibli-art-section {
+    display: none;
+    justify-content: space-around;
+    margin-bottom: 30px;
     opacity: 0;
-    transform: scale(0.5);
-    transition: opacity 0.5s ease-in-out, transform 2s ease-in-out;
+    transform: translateY(30px); /* Initial position for the scroll animation */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
-/* Animation for Fading Effect */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+
+.photo,
+.ghibli-art {
+    max-width: 200px; /* Reduced size for the images */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
-/* Hidden Class to Show Photos One by One */
+
+.photo:hover,
+.ghibli-art:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Toggle Button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-bottom: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 50px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Scroll Animation for Showing Photos */
+.photo-section.show-photo,
+.ghibli-art-section.show-photo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hide Normal Photos When Toggle is ON */
+.normal-photos {
+    display: block; /* Default display */
+}
+
+.ghibli-art-section {
+    display: none; /* Default to hidden */
+}
+
+/* If Toggle is Checked, Hide Normal Photos */
+#togglePhotoVisibility:checked ~ #photoContainer .normal-photos {
+    display: none;
+}
+
+#togglePhotoVisibility:checked ~ #photoContainer .ghibli-art-section {
+    display: flex; /* Show Ghibli Art */
+}
+
+/* 🔁 Scroll Reveal Animation */
+.hidden-photo {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s ease;
+}
+
 .show-photo {
     opacity: 1;
-    transform: scale(1);
+    transform: translateY(0);
 }
 
-/* Photo Container */
-.photo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin-top: 50px;
-}
-
-/* Romantic Animation Border */
-.animated-photo:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(255, 102, 153, 0.8);
-}
-
-/* Hidden Class */
+/* 🚫 Hidden Class */
 .hidden {
     display: none;
 }
+.visible {
+    display: block;
+}
+
+.mahi-photo-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    color: #fff;
+    animation: fadeIn 2s ease;
+}
+
+.mahi-photo-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+/* Mahi Photos Style */
+.mahi-photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.mahi-photo-box img {
+    width: 280px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ff66cc;
+    transition: 0.3s;
+}
+
+.mahi-photo-box img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff33aa;
+}
+
+/* Hide Photos by Default */
+.hidden-photo {
+    display: none;
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #00cc66;
+}
+/* Style the switch container */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide the default checkbox appearance */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Create the slider (track) */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+/* The slider before (left side) when off */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+}
+
+/* Change the background color when the toggle is checked */
+input:checked + .slider {
+    background-color: #4CAF50; /* Green color for on state */
+}
+
+/* Move the slider (circle) to the right when checked */
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Romantic Link Buttons */
+.header-line-1 a, .header-line-2 a {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: linear-gradient(135deg, #ff6f91, #ff9aa2);
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(255, 111, 145, 0.4);
+}
+
+/* Hover Effect */
+.header-line-1 a:hover, .header-line-2 a:hover {
+  background: linear-gradient(135deg, #ff9aa2, #ffb3c1);
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(255, 140, 180, 0.6);
+}
+.video-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(4px);
+    color: #fff;
+    animation: fadeIn 2s ease;
+}
+
+.video-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+/* Reels Style Video */
+.reels-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.reel-video {
+    width: 280px;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #ff66cc;
+    transition: 0.3s;
+    background-color: #000; /* optional: black bars if video ratio doesn't match */
+}
+
+.reel-video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ff33aa;
+}
+
+/* Hide Videos by Default */
+.hidden-video {
+    display: none;
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 24px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #00cc66;
+}
+
+input:checked + .slider:before {
+    transform: translateX(30px);
+}
+
+#mahiToggleLabel, #editToggleLabel {
+    display: block;
+    margin-top: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+}
+.password-enter {
+    color: black; /* Light mode ke liye */
+    background-color: white; /* Light mode me button background */
+    border: 1px solid black;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+}
+
+.dark-mode .password-enter {
+    color: white; /* Dark mode ke liye */
+    background-color: black; /* Dark mode me button background */
+    border: 1px solid white;
+}
+
 footer {
     background: black;
     color: white;
@@ -455,4 +917,40 @@ body.dark .dream {
 
 .dark-mode .custom-button:hover {
     background: linear-gradient(45deg, #444, #666);
+}
+/* === DARK MODE STYLE === */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.dark-mode .photo-section {
+    background-color: #1e1e1e;
+}
+.dark-mode .menu a {
+    color: white;
+}
+.dark-mode .header-container {
+    background-color: black;
+}
+.dark-mode .animated-photo {
+    border: 2px solid #444;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth transition */
+body {
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+/* Initially hidden */
+.hidden-photo {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+/* When shown */
+.show-photo {
+    opacity: 1;
+    transform: translateY(0);
 }
