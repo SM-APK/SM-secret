@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function checkPassword() {
     let password = document.getElementById("passwordInput").value;
-    if (password === "shashikant mahi") { 
+    if (password === "smahi143") { 
         document.getElementById("passwordPopup").style.display = "none";
         
         let welcomeBox = document.getElementById("welcomeAnimation");
